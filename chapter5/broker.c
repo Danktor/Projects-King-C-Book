@@ -1,10 +1,14 @@
 #include<stdio.h>
 
 int main(void){
-	int value;
-	float commission;
-	printf("Enter value of trade: ");
-	scanf("%d",&value);
+	int shares;
+	float value,price,commission;
+	printf("Enter the number of shares: ");
+	scanf("%d",&shares);
+	printf("Enter the value of shares: ");
+	scanf("%f",&price);
+	value = price*shares;
+	printf("The value of the trade is: $%.2f\n",value);
 	if(value < 2500){
 		commission = 30+0.017*value;
 	}
@@ -26,7 +30,7 @@ int main(void){
 	if(commission<39.00){
 		commission = 39.00;
 	}
-	printf("Commission: $%.2f\n",commission);
+	printf("Broker's Commission: $%.2f\n",commission);
 
 	return 0;
 }
