@@ -1,9 +1,9 @@
 #include<stdio.h>
 
 int main(void){
-	int n;
+	int d1,d2,d3;
 	printf("Enter a three digits number: ");
-	scanf("%d",&n);
-	printf("The reverse number is: %d%d%d\n",n%10,((n-n%10)/10)%10,((n-n%10)/10)/10);
+	scanf("%1d%1d%1d",&d1,&d2,&d3);
+	printf("The reverse number is: %d%d%d\n",d3,d2,d1);
 	return 0;
 }
