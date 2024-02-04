@@ -2,7 +2,7 @@
 
 int main(void){
 	int shares;
-	float value,price,commission;
+	float value,price,commission,rival_plus,rival_commission;
 	printf("Enter the number of shares: ");
 	scanf("%d",&shares);
 	printf("Enter the value of shares: ");
@@ -30,7 +30,13 @@ int main(void){
 	if(commission<39.00){
 		commission = 39.00;
 	}
+	if(shares<2000)
+		rival_plus = 00.03;
+	else
+		rival_plus = 00.02;
+	rival_commission = 33+rival_plus*shares;
 	printf("Broker's Commission: $%.2f\n",commission);
+	printf("Broker's rivals Comission: $%.2f\n",rival_commission);
 
 	return 0;
 }
